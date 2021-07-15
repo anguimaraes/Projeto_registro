@@ -19,12 +19,14 @@
         form {
     /* Apenas para centralizar o form na página */
     margin: 0 auto;
-    width: 900px;
+    width: 800px;
+    background-color: #ADD8E6;
     /* Para ver as bordas do formulário */
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
     overflow: hidden;
+    font-family: sans-serif;
     
 }
     form div + div {
@@ -40,7 +42,7 @@ label {
     text-align: right;
 }
 
-input, textarea {
+    input, textarea {
     /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
     font: 1em sans-serif;
 
@@ -53,7 +55,7 @@ input, textarea {
     border: 1px solid #999;
 }
 
-input:focus, textarea:focus {
+    input, textarea:focus {
     /* Dar um pouco de destaque nos elementos ativos */
     border-color: #000;
 }
@@ -78,6 +80,7 @@ textarea {
 .button {
     /* Para posicionar os botões para a mesma posição dos campos de texto */
     padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+    font-family: sans-serif;
 }
 button {
     /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
@@ -85,12 +88,14 @@ button {
     text-align: center;
     margin-top: 5px;
     margin-right: 6px;
+    font-family: sans-serif;
 
 }
 
 
 #botao{
    text-align: center;
+   font-family: sans-serif;
     
 
 }
@@ -98,22 +103,26 @@ button {
 button#botaoEditar{
 
     background-color: #7CFC00;
+    font-family: sans-serif;
 }
 
 button#botaoExcluir{
 
     background-color: #FF0000;
+    font-family: sans-serif;
 }
 
 table#titulo{
 
-    background-color: #C0C0C0;
+    background-color: #DCDCDC;
+    font-family: sans-serif;
 }
 
 
 a {
    color: black;
    text-decoration: none;
+   font-family: sans-serif;
 }
 table {
   border-collapse: separate;
@@ -136,16 +145,69 @@ table#corpo{
 
     border: none;
     background-color: #ADD8E6;
+    font-family: sans-serif;
 }
 
 input#cadastro{
 
     text-align: center;
+    font-family: sans-serif;
 }
 
 
 
+body{
 
+        background-color:  #B0C4DE; 
+        font-family: sans-serif;
+          
+}
+
+div#botao-pesquisa{
+
+    text-align: left;
+    font-family: sans-serif;
+
+}
+
+
+div#botao-consulta{
+
+    display: inline-block;
+    font-family: sans-serif;
+
+}
+
+div#botao-cadastrar{
+
+    text-align: center;
+    font-family: sans-serif;
+}
+
+form#botao-pesquisa{
+
+    margin-top: -40px;
+   display: inline-block;
+   padding: 20px;
+   margin-bottom: 20px;
+   margin-left: 5px;
+   width: 300px;
+   background-color: #ADD8E6;
+    /* Para ver as bordas do formulário */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    overflow: hidden;
+    border-color: #000;
+    font-family: sans-serif;
+
+}
+
+div#botao-editar{
+
+    text-align: center;
+
+}
 
 
 

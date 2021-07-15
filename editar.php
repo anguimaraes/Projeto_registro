@@ -16,7 +16,6 @@ try{
 	$falar = filter_var($_POST['falar']);
 	$contato = filter_var($_POST['contato']);
 	$desc_solic = filter_var($_POST['desc_solic']);
-	$formFile = filter_var($_POST['formFile']);
 	$data_2 = filter_var($_POST['data_2']);
 	$providencia = filter_var($_POST['providencia']);
 	$responsavel_1 = filter_var($_POST['responsavel_1']);
@@ -26,7 +25,7 @@ try{
 	$info_complementares = filter_var($_POST['info_complementares']);
 
 	//inserindo os dados
-	$update = $conectar->prepare("UPDATE solicitacoes SET solicitante= :solicitante, data_1= :data_1, prioridade= :prioridade, previ_exec= :previ_exec, bairro=:bairro, Rua= :Rua, num_compl= :num_compl, referencia= :referencia, falar= :falar, contato= :contato, desc_solic= :desc_solic, formFile= :formFile, data_2= :data_2, providencia= :providencia, responsavel_1= :responsavel_1, data_3= :data_3, resultado_final= :resultado_final, responsavel_2= :responsavel_2, info_complementares= :info_complementares WHERE id_registro = :id_registro");
+	$update = $conectar->prepare("UPDATE solicitacoes SET solicitante= :solicitante, data_1= :data_1, prioridade= :prioridade, previ_exec= :previ_exec, bairro=:bairro, Rua= :Rua, num_compl= :num_compl, referencia= :referencia, falar= :falar, contato= :contato, desc_solic= :desc_solic, data_2= :data_2, providencia= :providencia, responsavel_1= :responsavel_1, data_3= :data_3, resultado_final= :resultado_final, responsavel_2= :responsavel_2, info_complementares= :info_complementares WHERE id_registro = :id_registro");
 
 	$update->bindParam(':id_registro', $id_registro);
 	$update->bindParam(':solicitante', $solicitante);
@@ -40,7 +39,6 @@ try{
 	$update->bindParam(':falar', $falar);
 	$update->bindParam(':contato', $contato);
 	$update->bindParam(':desc_solic', $desc_solic);
-	$update->bindParam(':formFile', $formFile);
 	$update->bindParam(':data_2', $data_2);
 	$update->bindParam(':providencia', $providencia);
 	$update->bindParam(':responsavel_1', $responsavel_1);

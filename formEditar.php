@@ -80,9 +80,6 @@
     <div>
         <label for="desc_solic"></label>
         <textarea  name="desc_solic" value="<?php echo $linha['desc_solic']?>" id="desc_solic"></textarea>
-        <p> </p>
-        <label for="formFile" class="form-label">Selecione um arquivo</label>
-                <input class="form-control" type="file" name="formFile" value="<?php echo $linha['formFile']?>" id="formFile">
     </div>
 
     <h3>Acompanhamento:</h3>
@@ -127,9 +124,12 @@
         <p> </p>
     </div>
 
-    <input type="hidden" name="id_registro" value="<?php echo $linha['id_registro']?>" >
-    <input type="submit" value="Editar">
-    <button><a href="index.php">Cancelar</a> </button>
+
+     <div id="botao-editar">
+        <input type="hidden" name="id_registro" value="<?php echo $linha['id_registro']?>" >
+        <button type="submit">Editar</button>
+        <button><a href="index.php">Cancelar</a> </button>
+    </div>
 </form> 
 
 

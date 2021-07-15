@@ -14,7 +14,6 @@ try{
 	$referencia = filter_var($_POST['referencia']);
 	$falar = filter_var($_POST['falar']);
 	$contato = filter_var($_POST['contato']);
-	$formFile = filter_var($_POST['formFile']);
 	$desc_solic = filter_var($_POST['desc_solic']);
 	$data_2 = filter_var($_POST['data_2']);
 	$providencia = filter_var($_POST['providencia']);
@@ -25,7 +24,7 @@ try{
 	$info_complementares = filter_var($_POST['info_complementares']);
 
 	//inserindo os dados
-	$insert = $conectar->prepare("INSERT INTO solicitacoes (solicitante, data_1, prioridade,previ_exec, bairro, Rua, num_compl, referencia, falar, contato, desc_solic, formFile, data_2, providencia, responsavel_1, data_3, resultado_final, responsavel_2, info_complementares) VALUES (:solicitante, :data_1, :prioridade, :previ_exec, :bairro, :Rua, :num_compl, :referencia, :falar, :contato, :desc_solic, :formFile, :data_2, :providencia, :responsavel_1, :data_3, :resultado_final, :responsavel_2, :info_complementares)");
+	$insert = $conectar->prepare("INSERT INTO solicitacoes (solicitante, data_1, prioridade,previ_exec, bairro, Rua, num_compl, referencia, falar, contato, desc_solic, data_2, providencia, responsavel_1, data_3, resultado_final, responsavel_2, info_complementares) VALUES (:solicitante, :data_1, :prioridade, :previ_exec, :bairro, :Rua, :num_compl, :referencia, :falar, :contato, :desc_solic, :data_2, :providencia, :responsavel_1, :data_3, :resultado_final, :responsavel_2, :info_complementares)");
 
 	$insert->bindParam(':solicitante', $solicitante);
 	$insert->bindParam(':data_1', $data_1);
@@ -37,7 +36,6 @@ try{
 	$insert->bindParam(':referencia', $referencia);
 	$insert->bindParam(':falar', $falar);
 	$insert->bindParam(':contato', $contato);
-	$insert->bindParam(':formFile', $formFile);
 	$insert->bindParam(':desc_solic', $desc_solic);
 	$insert->bindParam(':data_2', $data_2);
 	$insert->bindParam(':providencia', $providencia);

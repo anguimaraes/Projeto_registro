@@ -61,15 +61,12 @@
         <input type="text" placeholder="(00) 0000-0000" data-mask="(00) 0000-0000" maxlength="15" autocomplete="on" name="contato" id="contato" />
     </div>
 
-<h3>Descrição da solicitação (se possível, anexar fotos):</h3>
+<h3>Descrição da solicitação:</h3>
 
 
     <div>
         <label for="desc_solic"></label>
         <textarea  name="desc_solic" id="desc_solic"></textarea>
-        <p> </p>
-        <label for="formFile" class="form-label">Selecione um arquivo</label>
-                <input class="form-control" type="file" name="formFile" id="formFile">
     </div>
 
     <h3>Acompanhamento:</h3>
@@ -114,9 +111,10 @@
         <p> </p>
     </div>
 
-    
-    <input type="submit" value="Cadastrar">
+    <div id="botao-cadastrar">
+    <button type="submit">Cadastrar</button>
     <button><a href="index.php">Cancelar</a> </button>
+    </div>
 </form> 
 
 
