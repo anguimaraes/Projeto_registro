@@ -5,6 +5,34 @@
 	<title>Registro e acompanhamento de solicitações de serviços</title>
 
 	<link rel="stylesheet" href="estilos.css">
+
+    <script>
+        
+        /* Máscaras ER */
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+    return document.getElementById( el );
+}
+window.onload = function(){
+    id('contato').onkeyup = function(){
+        mascara( this, mtel );
+    }
+}
+
+    </script>
 </head>
 <body>
 <form action="cadastrar.php" method="post">
@@ -58,7 +86,7 @@
 
     <div class="direita">
         <label for="contato">Contato:</label>
-        <input type="text" placeholder="(00) 0000-0000" data-mask="(00) 0000-0000" maxlength="15" autocomplete="on" name="contato" id="contato" />
+        <input type="text" placeholder="Digite um número de telefone" maxlength="15" name="contato" id="contato" />
     </div>
 
 <h3>Descrição da solicitação:</h3>
